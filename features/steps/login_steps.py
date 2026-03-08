@@ -7,7 +7,7 @@ from utils.excel_reader import ExcelReader
 
 @given(u'user should be on login page')
 def step_impl(context):
-    print("niramala")
+    print("Niramala")
     context.test_data=ExcelReader.get_test_data(
         "Data/Testdata.xlsx","Sheet1")
     print(context.test_data)
