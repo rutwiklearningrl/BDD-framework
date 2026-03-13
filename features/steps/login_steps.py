@@ -1,3 +1,5 @@
+import time
+
 from behave import given, when, then
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -20,6 +22,7 @@ def step_impl(context):
     context.driver.find_element(By.NAME, "user_name").send_keys(context.test_data[0]["userid"])
     context.driver.find_element(By.NAME, "user_password").send_keys(context.test_data[0]["password"])
     context.driver.find_element(By.NAME,"Login").click()
+    time.sleep(1)
 
 @when('user enters the invalid credentials and click on login button')
 def step_impl(context):
